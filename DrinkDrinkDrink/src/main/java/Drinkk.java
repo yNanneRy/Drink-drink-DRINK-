@@ -79,6 +79,10 @@ public class Drinkk extends javax.swing.JFrame {
     // LinkedList do tipo INTEGER que manterá a pontuação de cada jogador.
     LinkedList<Integer> pontos = new LinkedList(); 
     
+    // LinkedList do tipo STRING que manterá os colocados do jogo
+    LinkedList<String> colocados = new LinkedList();
+    int contcolocado = 1;
+    
     // Variável que manterá o que o jogador escolher.
     int vddoudsf;
     
@@ -1738,7 +1742,8 @@ public class Drinkk extends javax.swing.JFrame {
     // clicar no botão, e para que isso aconteça, os comandos seguintes serão
     // executados:
     private void FinalizarJogoBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalizarJogoBTActionPerformed
-       Colocados.setVisible(true);
+        sons.jogoFinalizado();
+        Colocados.setVisible(true);
         // Primeira vez que "JOGO FINALIZADO" aparece
         service.scheduleAtFixedRate(new Runnable(){
                 public void run(){
@@ -2497,12 +2502,12 @@ public class Drinkk extends javax.swing.JFrame {
             
         // Jogadores aparecem.
         } else if(contjogofinalizado == 24){
-            dec2ColocadoLABEL.setText(dec2ColocadoLABEL.getText() + " [jogador] (* pontos)");
+            dec2ColocadoLABEL.setText(dec2ColocadoLABEL.getText() + colocados.get(12)  + "* pontos)");
         } else if(contjogofinalizado == 25){
-            dec1ColocadoLABEL.setText(dec1ColocadoLABEL.getText() + " [jogador] (* pontos)");
+            dec1ColocadoLABEL.setText(dec1ColocadoLABEL.getText() + colocados.get(11) + "* pontos)");
         } 
         else if(contjogofinalizado == 26){
-            decColocadoLABEL.setText(decColocadoLABEL.getText() + " [jogador] (* pontos)");
+            decColocadoLABEL.setText(decColocadoLABEL.getText() + colocados.get(10) + "* pontos)");
         } 
         else if(contjogofinalizado == 27){
             nonColocadoLABEL.setText(nonColocadoLABEL.getText() + " [jogador] (* pontos)");
@@ -2534,6 +2539,17 @@ public class Drinkk extends javax.swing.JFrame {
                 Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
             }
         } 
+    }
+    
+    public void colocados(){
+        for(int i = 0; i < 12; i++){
+            for(int j = 0; j < 12; j++){
+               if (pontos.get(i) < pontos.get(j)){
+                   contcolocado = contcolocado + 1;
+               }
+            }
+            colocados.set(contcolocado, jogadores.get(i));
+        }
     }
     
     public static void main(String args[]) {

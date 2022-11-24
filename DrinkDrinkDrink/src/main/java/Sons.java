@@ -6,6 +6,7 @@ public class Sons {
     Clip efeito2;
     Clip efeito3;
     Clip tema;
+    Clip jogoFinalizado;
 
     public void Efeito2() {
         String dir = System.getProperty("user.dir");
@@ -87,4 +88,16 @@ public class Sons {
         }
     }
     
+    public void jogoFinalizado() {
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/JogoFinalizado.wav");
+        try {
+            jogoFinalizado = AudioSystem.getClip();
+            jogoFinalizado.open(AudioSystem.getAudioInputStream(lol));
+            jogoFinalizado.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
 }
