@@ -8,6 +8,7 @@ By: Renan Alves.
 // Todas as importações que o projeto usa.
 import java.awt.Color;
 import java.awt.Cursor;
+import java.awt.Font;
 import java.awt.Graphics;
 import java.awt.event.KeyEvent;
 import java.util.LinkedList;
@@ -45,6 +46,16 @@ public class Drinkk extends javax.swing.JFrame {
     ScheduledExecutorService service = Executors.newSingleThreadScheduledExecutor();
     Color color = Color.BLACK;
     int cont = 0;
+    int contjogofinalizado = 0;
+    
+    // Fontes usadas na alternancia de tamanhos
+    Font fonte1 = new Font("Segoe UI", Font.BOLD, 130);
+    Font fonte2 = new Font("Segoe UI", Font.BOLD, 110);
+    Font fonte3 = new Font("Segoe UI", Font.BOLD, 90);
+    Font fonte4 = new Font("Segoe UI", Font.BOLD, 70);
+    Font fonte5 = new Font("Segoe UI", Font.BOLD, 55);
+    Font fonte6 = new Font("Segoe UI", Font.BOLD, 30);
+    Font fonte = new Font("Segoe UI", Font.BOLD, 150);
     
     // LinkedList do tipo STRING que compreende os jogadores no jogo. Seu tamanho é o
     // o número de jogadores que o usuário digitar no menu do jogo.
@@ -154,6 +165,23 @@ public class Drinkk extends javax.swing.JFrame {
         BeberBT.setVisible(false);
         pontobb.setVisible(false);
         
+        // Componentes de COLOCADOS que devem ser inicializados de tal forma.
+        ColocadosLABEL.setVisible(false);
+        JogoFinalizadoLABEL.setVisible(false);
+        primColocadoLABEL.setVisible(false);
+        segColocadoLABEL.setVisible(false);
+        terColocadoLABEL.setVisible(false);
+        quarColocadoLABEL.setVisible(false);
+        quinColocadoLABEL.setVisible(false);
+        sexColocadoLABEL.setVisible(false);
+        setColocadoLABEL.setVisible(false);
+        oitColocadoLABEL.setVisible(false);
+        nonColocadoLABEL.setVisible(false);
+        decColocadoLABEL.setVisible(false);
+        dec1ColocadoLABEL.setVisible(false);
+        dec2ColocadoLABEL.setVisible(false);
+        
+        
         // JFRAMES que devem ser obrigatóriamente personalizados. Aqui eles podem
         // ter configurações de tamanho, undecoreted, etc.
         BlackWindow.setExtendedState(MAXIMIZED_BOTH);
@@ -162,6 +190,8 @@ public class Drinkk extends javax.swing.JFrame {
         Drink3.setExtendedState(MAXIMIZED_BOTH);
         Segundo.getContentPane().setBackground(Color.black);
         Colocados.setExtendedState(MAXIMIZED_BOTH);
+        JOGOFINALIZADO.setExtendedState(MAXIMIZED_BOTH);
+        JOGOFINALIZADO.getContentPane().setBackground(Color.black);
         BlackWindow.getContentPane().setBackground(Color.black);
         Colocados.getContentPane().setBackground(Color.black);
         
@@ -346,6 +376,21 @@ public class Drinkk extends javax.swing.JFrame {
         Drink33 = new javax.swing.JButton();
         BlackWindow = new javax.swing.JFrame();
         Colocados = new javax.swing.JFrame();
+        JogoFinalizadoLABEL = new javax.swing.JLabel();
+        ColocadosLABEL = new javax.swing.JLabel();
+        primColocadoLABEL = new javax.swing.JLabel();
+        segColocadoLABEL = new javax.swing.JLabel();
+        terColocadoLABEL = new javax.swing.JLabel();
+        quarColocadoLABEL = new javax.swing.JLabel();
+        quinColocadoLABEL = new javax.swing.JLabel();
+        sexColocadoLABEL = new javax.swing.JLabel();
+        setColocadoLABEL = new javax.swing.JLabel();
+        oitColocadoLABEL = new javax.swing.JLabel();
+        nonColocadoLABEL = new javax.swing.JLabel();
+        decColocadoLABEL = new javax.swing.JLabel();
+        dec1ColocadoLABEL = new javax.swing.JLabel();
+        dec2ColocadoLABEL = new javax.swing.JLabel();
+        JOGOFINALIZADO = new javax.swing.JFrame();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
@@ -367,7 +412,6 @@ public class Drinkk extends javax.swing.JFrame {
         Segundo.setLocation(new java.awt.Point(315, 150));
         Segundo.setMinimumSize(new java.awt.Dimension(882, 575));
         Segundo.setName("Segundo"); // NOI18N
-        Segundo.setPreferredSize(new java.awt.Dimension(882, 575));
         Segundo.setResizable(false);
         Segundo.setSize(new java.awt.Dimension(882, 575));
 
@@ -1036,23 +1080,148 @@ public class Drinkk extends javax.swing.JFrame {
         Colocados.setUndecorated(true);
         Colocados.setResizable(false);
 
-        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
-        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
-        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        jLabel4.setText("JOGO FINALIZADO!");
+        JogoFinalizadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 48)); // NOI18N
+        JogoFinalizadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        JogoFinalizadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        JogoFinalizadoLABEL.setText("JOGO FINALIZADO!");
+
+        ColocadosLABEL.setFont(new java.awt.Font("Segoe UI", 1, 28)); // NOI18N
+        ColocadosLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        ColocadosLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        ColocadosLABEL.setText("COLOCADOS:");
+
+        primColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        primColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        primColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        primColocadoLABEL.setText("1º LUGAR:");
+
+        segColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        segColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        segColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        segColocadoLABEL.setText("2º LUGAR:");
+
+        terColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        terColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        terColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        terColocadoLABEL.setText("3º LUGAR:");
+        terColocadoLABEL.setToolTipText("");
+
+        quarColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        quarColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        quarColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        quarColocadoLABEL.setText("4º LUGAR:");
+
+        quinColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        quinColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        quinColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        quinColocadoLABEL.setText("5º LUGAR:");
+
+        sexColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        sexColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        sexColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        sexColocadoLABEL.setText("6º LUGAR:");
+
+        setColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        setColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        setColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        setColocadoLABEL.setText("7º LUGAR:");
+
+        oitColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        oitColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        oitColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        oitColocadoLABEL.setText("8º LUGAR:");
+
+        nonColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        nonColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        nonColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        nonColocadoLABEL.setText("9º LUGAR:");
+
+        decColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        decColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        decColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        decColocadoLABEL.setText("10º LUGAR:");
+
+        dec1ColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        dec1ColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        dec1ColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dec1ColocadoLABEL.setText("11º LUGAR:");
+
+        dec2ColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        dec2ColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
+        dec2ColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        dec2ColocadoLABEL.setText("12º LUGAR:");
 
         javax.swing.GroupLayout ColocadosLayout = new javax.swing.GroupLayout(Colocados.getContentPane());
         Colocados.getContentPane().setLayout(ColocadosLayout);
         ColocadosLayout.setHorizontalGroup(
             ColocadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
-            .addComponent(jLabel4, javax.swing.GroupLayout.Alignment.TRAILING, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
+            .addComponent(JogoFinalizadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, 706, Short.MAX_VALUE)
+            .addComponent(ColocadosLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(primColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(segColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(terColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(quarColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(quinColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(sexColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(nonColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(dec1ColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(oitColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(setColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(decColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addComponent(dec2ColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
         );
         ColocadosLayout.setVerticalGroup(
             ColocadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addGroup(ColocadosLayout.createSequentialGroup()
-                .addGap(25, 25, 25)
-                .addComponent(jLabel4, javax.swing.GroupLayout.PREFERRED_SIZE, 102, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(474, Short.MAX_VALUE))
+                .addComponent(JogoFinalizadoLABEL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ColocadosLABEL)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.UNRELATED)
+                .addComponent(primColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 50, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(segColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 47, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(terColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 46, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(quarColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 44, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(quinColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 45, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(sexColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 59, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(setColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 54, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(oitColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 58, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(nonColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 55, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(decColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 60, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dec1ColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(dec2ColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addContainerGap(29, Short.MAX_VALUE))
+        );
+
+        JOGOFINALIZADO.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
+        JOGOFINALIZADO.setAlwaysOnTop(true);
+        JOGOFINALIZADO.setUndecorated(true);
+        JOGOFINALIZADO.setResizable(false);
+
+        jLabel4.setFont(new java.awt.Font("Segoe UI", 1, 150)); // NOI18N
+        jLabel4.setForeground(new java.awt.Color(255, 255, 255));
+        jLabel4.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
+        jLabel4.setText("JOGO FINALIZADO!");
+
+        javax.swing.GroupLayout JOGOFINALIZADOLayout = new javax.swing.GroupLayout(JOGOFINALIZADO.getContentPane());
+        JOGOFINALIZADO.getContentPane().setLayout(JOGOFINALIZADOLayout);
+        JOGOFINALIZADOLayout.setHorizontalGroup(
+            JOGOFINALIZADOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+        );
+        JOGOFINALIZADOLayout.setVerticalGroup(
+            JOGOFINALIZADOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -1569,7 +1738,55 @@ public class Drinkk extends javax.swing.JFrame {
     // clicar no botão, e para que isso aconteça, os comandos seguintes serão
     // executados:
     private void FinalizarJogoBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalizarJogoBTActionPerformed
-        Colocados.setVisible(true);
+       Colocados.setVisible(true);
+        // Primeira vez que "JOGO FINALIZADO" aparece
+        service.scheduleAtFixedRate(new Runnable(){
+                public void run(){
+                    jogofinalizado();
+                }
+            }, 1000, 500, TimeUnit.MILLISECONDS);
+       
+        // Efeito de diminuição de "JOGO FINALIZADO"
+        service.scheduleAtFixedRate(new Runnable(){
+            public void run(){
+                jogofinalizado();
+            }
+        }, 3000, 500, TimeUnit.MILLISECONDS);
+        
+        // Primeira vez que "COLOCADOS" aparece
+        service.scheduleAtFixedRate(new Runnable(){
+            public void run(){
+                jogofinalizado();
+            }
+        }, 6000, 500, TimeUnit.MILLISECONDS);
+        
+        // Efeito de diminuição de "COLOCADOS"
+        service.scheduleAtFixedRate(new Runnable(){
+            public void run(){
+                jogofinalizado();
+            }
+        }, 7000, 500, TimeUnit.MILLISECONDS);
+        
+        // Efeito de aparecimento dos colocados
+        service.scheduleAtFixedRate(new Runnable(){
+            public void run(){
+                jogofinalizado();
+            }
+        }, 8000, 300, TimeUnit.MILLISECONDS);
+        
+        // Efeito de diminuição de "Preparados?"
+        service.scheduleAtFixedRate(new Runnable(){
+            public void run(){
+                jogofinalizado();
+            }
+        }, 11000, 300, TimeUnit.MILLISECONDS);
+        
+        // Efeito de aparecimento dos colocados
+        service.scheduleAtFixedRate(new Runnable(){
+            public void run(){
+                jogofinalizado();
+            }
+        }, 14000, 300, TimeUnit.MILLISECONDS);
     }//GEN-LAST:event_FinalizarJogoBTActionPerformed
 
     // Ação performada do botão "Adicionar" da segunda tela. Ela serve para adicionar
@@ -2142,6 +2359,183 @@ public class Drinkk extends javax.swing.JFrame {
         }
     }
     
+    // Esse é o método chamado para quando o jogo for finalizado. Ele é uma animação.
+    public void jogofinalizado(){
+        
+        // Contador para controle da animeção.
+        contjogofinalizado = contjogofinalizado + 1;
+        
+        // Primeira vez que aparece na tela "JOGO FINALIZADO".
+        if (contjogofinalizado == 1){
+            JOGOFINALIZADO.setVisible(true);
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        // "JOGO FINALIZADO" então diminui de tamanho.
+        } else if(contjogofinalizado == 2){
+            jLabel4.setFont(fonte1);
+            jLabel4.setForeground(Color.black);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.white);
+        } else if (contjogofinalizado == 3){
+            jLabel4.setFont(fonte2);
+            jLabel4.setForeground(Color.white);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.black);
+        } else if (contjogofinalizado == 4){
+            jLabel4.setFont(fonte3);
+            jLabel4.setForeground(Color.black);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.white);
+        } else if (contjogofinalizado == 5){
+            jLabel4.setFont(fonte4);
+            jLabel4.setForeground(Color.white);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.black);
+            
+        // Tela de "Colocados" aparece, contendo apenas o label de jogo finalizado.
+        } else if (contjogofinalizado == 6){
+            JogoFinalizadoLABEL.setVisible(true);
+            JOGOFINALIZADO.setVisible(false);
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        // Primeira vez que "COLOCADOS" aparece na tela
+        } else if (contjogofinalizado == 7){
+            jLabel4.setFont(fonte);
+            jLabel4.setText("COLOCADOS:");
+            JOGOFINALIZADO.setVisible(true);
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        // "COLOCADOS" diminui de tamanho.
+        } else if(contjogofinalizado == 8){
+            jLabel4.setFont(fonte3);
+            jLabel4.setForeground(Color.black);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.white);
+            
+        // Tela de "Colocados" reaparece, agora contendo os labels de jogo finalizado e colocados.    
+        } else if(contjogofinalizado == 9){
+            ColocadosLABEL.setVisible(true);
+            JOGOFINALIZADO.setVisible(false);
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        
+        // Os colocados aparecem no jogo.
+        } else if (contjogofinalizado == 10){
+            primColocadoLABEL.setVisible(true);
+            segColocadoLABEL.setVisible(true);
+        } else if (contjogofinalizado == 11){
+            terColocadoLABEL.setVisible(true);
+            quarColocadoLABEL.setVisible(true);
+        } else if (contjogofinalizado == 12){
+            quinColocadoLABEL.setVisible(true);
+            sexColocadoLABEL.setVisible(true);
+        } else if (contjogofinalizado == 13){
+            setColocadoLABEL.setVisible(true);
+            oitColocadoLABEL.setVisible(true);
+        } else if (contjogofinalizado == 14){
+            nonColocadoLABEL.setVisible(true);
+            decColocadoLABEL.setVisible(true);
+        } else if (contjogofinalizado == 15){
+            dec1ColocadoLABEL.setVisible(true);
+            dec2ColocadoLABEL.setVisible(true);
+            
+        // Primeira vez que "Preparados?" aparece na tela.
+        } else if (contjogofinalizado == 16){
+           jLabel4.setFont(fonte);
+           jLabel4.setText("Preparados?");
+           JOGOFINALIZADO.setVisible(true);
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        // "Preparados?" diminui de tamanho.
+        } else if (contjogofinalizado == 17){
+            jLabel4.setFont(fonte1);
+            jLabel4.setForeground(Color.white);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.black);
+        } else if (contjogofinalizado == 18){
+            jLabel4.setFont(fonte2);
+            jLabel4.setForeground(Color.black);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.white);
+        } else if (contjogofinalizado == 19){
+            jLabel4.setFont(fonte3);
+            jLabel4.setForeground(Color.white);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.black);
+        } else if (contjogofinalizado == 20){
+            jLabel4.setFont(fonte4);
+            jLabel4.setForeground(Color.black);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.white);
+        } else if (contjogofinalizado == 21){
+            jLabel4.setFont(fonte5);
+            jLabel4.setForeground(Color.white);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.black);
+        } else if (contjogofinalizado == 22){
+            jLabel4.setFont(fonte6);
+            jLabel4.setForeground(Color.black);
+            JOGOFINALIZADO.getContentPane().setBackground(Color.white);
+            
+        // Tela de "Colocados" reaparece.   
+        } else if (contjogofinalizado == 23){
+            JOGOFINALIZADO.setVisible(false);
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+            
+        // Jogadores aparecem.
+        } else if(contjogofinalizado == 24){
+            dec2ColocadoLABEL.setText(dec2ColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } else if(contjogofinalizado == 25){
+            dec1ColocadoLABEL.setText(dec1ColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } 
+        else if(contjogofinalizado == 26){
+            decColocadoLABEL.setText(decColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } 
+        else if(contjogofinalizado == 27){
+            nonColocadoLABEL.setText(nonColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } 
+        else if(contjogofinalizado == 28){
+            oitColocadoLABEL.setText(oitColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } 
+        else if(contjogofinalizado == 29){
+            setColocadoLABEL.setText(setColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } 
+        else if(contjogofinalizado == 30){
+            sexColocadoLABEL.setText(sexColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } 
+        else if(contjogofinalizado == 31){
+            quinColocadoLABEL.setText(quinColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } 
+        else if(contjogofinalizado == 32){
+            quarColocadoLABEL.setText(quarColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } 
+        else if(contjogofinalizado == 33){
+            terColocadoLABEL.setText(terColocadoLABEL.getText() + " [jogador] (* pontos)");
+        } 
+        else if(contjogofinalizado == 34){
+            segColocadoLABEL.setText(segColocadoLABEL.getText() + " [jogador] (* pontos)");
+            primColocadoLABEL.setText(primColocadoLABEL.getText() + " [jogador] (* pontos)");
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        } 
+    }
+    
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
         //<editor-fold defaultstate="collapsed" desc=" Look and feel setting code (optional) ">
@@ -2184,6 +2578,7 @@ public class Drinkk extends javax.swing.JFrame {
     private javax.swing.JFrame BlackWindow;
     private javax.swing.JTextField CDNome;
     private javax.swing.JFrame Colocados;
+    private javax.swing.JLabel ColocadosLABEL;
     private javax.swing.JButton ConfirmaBT;
     private javax.swing.JButton DesafioBT;
     private javax.swing.JFrame Drink1;
@@ -2197,6 +2592,7 @@ public class Drinkk extends javax.swing.JFrame {
     private javax.swing.JButton FinalizarJogoBT;
     private javax.swing.JButton IniciarBT;
     private javax.swing.JButton IniciarJogoBT;
+    private javax.swing.JFrame JOGOFINALIZADO;
     private javax.swing.JButton Jg1;
     private javax.swing.JButton Jg10;
     private javax.swing.JLabel Jg10pnt;
@@ -2223,6 +2619,7 @@ public class Drinkk extends javax.swing.JFrame {
     private javax.swing.JLabel Jg9pnt;
     private javax.swing.JLabel JogadorSorteado;
     private javax.swing.JLabel JogadoresTXT;
+    private javax.swing.JLabel JogoFinalizadoLABEL;
     private javax.swing.JLabel NomeJogadoresTXT;
     private javax.swing.JLabel NomeJogadoresTXT1;
     private javax.swing.JLabel NomeTXT;
@@ -2232,13 +2629,25 @@ public class Drinkk extends javax.swing.JFrame {
     private javax.swing.JFrame Terceiro;
     private javax.swing.JButton VerdadeBT;
     private javax.swing.JButton VoltarBT;
+    private javax.swing.JLabel dec1ColocadoLABEL;
+    private javax.swing.JLabel dec2ColocadoLABEL;
+    private javax.swing.JLabel decColocadoLABEL;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
     private javax.swing.JLabel jLabel4;
+    private javax.swing.JLabel nonColocadoLABEL;
+    private javax.swing.JLabel oitColocadoLABEL;
     private javax.swing.JLabel pontobb;
     private javax.swing.JLabel pontodsf;
     private javax.swing.JLabel pontovdd;
+    private javax.swing.JLabel primColocadoLABEL;
+    private javax.swing.JLabel quarColocadoLABEL;
+    private javax.swing.JLabel quinColocadoLABEL;
+    private javax.swing.JLabel segColocadoLABEL;
+    private javax.swing.JLabel setColocadoLABEL;
+    private javax.swing.JLabel sexColocadoLABEL;
+    private javax.swing.JLabel terColocadoLABEL;
     private javax.swing.JLabel txtVddDsf;
     // End of variables declaration//GEN-END:variables
 }
