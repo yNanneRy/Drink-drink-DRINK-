@@ -79,9 +79,9 @@ public class Drinkk extends javax.swing.JFrame {
     // LinkedList do tipo INTEGER que manterá a pontuação de cada jogador.
     LinkedList<Integer> pontos = new LinkedList(); 
     
-    String colocados[] = new String[12];
-    int pntcolocados[] = new int[12];
-    int indexofremove = 0;
+    String colocados[];
+    int pntcolocados[];
+    int contadorcolocado = 0;
     
     // Variável que manterá o que o jogador escolher.
     int vddoudsf;
@@ -1742,6 +1742,7 @@ public class Drinkk extends javax.swing.JFrame {
     // clicar no botão, e para que isso aconteça, os comandos seguintes serão
     // executados:
     private void FinalizarJogoBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_FinalizarJogoBTActionPerformed
+        colocados();
         sons.jogoFinalizado();
         Colocados.setVisible(true);
         // Primeira vez que "JOGO FINALIZADO" aparece
@@ -2502,37 +2503,85 @@ public class Drinkk extends javax.swing.JFrame {
             
         // Jogadores aparecem.
         } else if(contjogofinalizado == 24){
-            dec2ColocadoLABEL.setText(dec2ColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  12){
+                dec2ColocadoLABEL.setText("12º LUGAR: " + colocados[11] + " (" + pntcolocados[11] + " pontos)");
+            } else {    
+                dec2ColocadoLABEL.setText("12º LUGAR: Ninguém!");
+            }   
         } else if(contjogofinalizado == 25){
-            dec1ColocadoLABEL.setText(dec1ColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  11){
+                dec1ColocadoLABEL.setText("11º LUGAR: " + colocados[10] + " (" + pntcolocados[10] + " pontos)");
+            } else {    
+                dec1ColocadoLABEL.setText("11º LUGAR: Ninguém!");
+            }   
         } 
         else if(contjogofinalizado == 26){
-            decColocadoLABEL.setText(decColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  10){
+                decColocadoLABEL.setText("10º LUGAR: " + colocados[9] + " (" + pntcolocados[9] + " pontos)");
+            } else {    
+                decColocadoLABEL.setText("10º LUGAR: Ninguém!");
+            }   
         } 
         else if(contjogofinalizado == 27){
-            nonColocadoLABEL.setText(nonColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  9){
+                nonColocadoLABEL.setText("9º LUGAR: " + colocados[8] + " (" + pntcolocados[8] + " pontos)");
+            } else {    
+                nonColocadoLABEL.setText("9º LUGAR: Ninguém!");
+            }   
         } 
         else if(contjogofinalizado == 28){
-            oitColocadoLABEL.setText(oitColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  8){
+                oitColocadoLABEL.setText("8º LUGAR: " + colocados[7] + " (" + pntcolocados[7] + " pontos)");
+            } else {    
+                oitColocadoLABEL.setText("8º LUGAR: Ninguém!");
+            }   
         } 
         else if(contjogofinalizado == 29){
-            setColocadoLABEL.setText(setColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  7){
+                setColocadoLABEL.setText("7º LUGAR: " + colocados[6] + " (" + pntcolocados[6] + " pontos)");
+            } else {    
+                setColocadoLABEL.setText("7º LUGAR: Ninguém!");
+            }   
         } 
         else if(contjogofinalizado == 30){
-            sexColocadoLABEL.setText(sexColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  6){
+                sexColocadoLABEL.setText("6º LUGAR: " + colocados[5] + " (" + pntcolocados[5] + " pontos)");
+            } else {    
+                sexColocadoLABEL.setText("6º LUGAR: Ninguém!");
+            }   
         } 
         else if(contjogofinalizado == 31){
-            quinColocadoLABEL.setText(quinColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  5){
+                quinColocadoLABEL.setText("5º LUGAR: " + colocados[4] + " (" + pntcolocados[4] + " pontos)");
+            } else {    
+                quinColocadoLABEL.setText("5º LUGAR: Ninguém!");
+            }   
         } 
         else if(contjogofinalizado == 32){
-            quarColocadoLABEL.setText(quarColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  4){
+                quarColocadoLABEL.setText("4º LUGAR: " + colocados[3] + " (" + pntcolocados[3] + " pontos)");
+            } else {    
+                quarColocadoLABEL.setText("4º LUGAR: Ninguém!");
+            }   
         } 
         else if(contjogofinalizado == 33){
-            terColocadoLABEL.setText(terColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  3){
+                terColocadoLABEL.setText("3º LUGAR: " + colocados[2] + " (" + pntcolocados[2] + " pontos)");
+            } else {    
+                terColocadoLABEL.setText("3º LUGAR: Ninguém!");
+            }   
         } 
         else if(contjogofinalizado == 34){
-            segColocadoLABEL.setText(segColocadoLABEL.getText() + "* pontos)");
-            primColocadoLABEL.setText(primColocadoLABEL.getText() + "* pontos)");
+            if(contadorcolocado >=  2){
+                segColocadoLABEL.setText("2º LUGAR: " + colocados[1] + " (" + pntcolocados[1] + " pontos)");
+            } else {    
+                segColocadoLABEL.setText("2º LUGAR: Ninguém!");
+            }   
+            if(contadorcolocado >=  1){
+                primColocadoLABEL.setText("1º LUGAR: " + colocados[0] + " (" + pntcolocados[0] + " pontos)");
+            } else {    
+                primColocadoLABEL.setText("1º LUGAR: Ninguém!");
+            }   
             try {
                 service.wait();
             } catch (InterruptedException ex) {
@@ -2543,175 +2592,51 @@ public class Drinkk extends javax.swing.JFrame {
     }
     
     public void colocados(){
-            
+       
+        int contadorcl = 0;
+        boolean flagposi = false;
+        int msmponto = 0;
+        boolean flagmsmponto = false;
+        
+        for(int i = 0; i < 12; i++){
+            if(botoesjogadores.get(i).getText().isBlank() == false){
+                contadorcolocado = contadorcolocado + 1;
+            }
+        }
+        
+        colocados = new String[contadorcolocado];
+        pntcolocados  = new int[contadorcolocado];
+        
         for(int i = 0; i < 12; i++){
             for(int j = 0; j < 12; j++){
-                if (pontos.get(i) > pontos.get(j)){
-                    colocados[0] = botoesjogadores.get(i).getText();
-                    pntcolocados[0] = pontos.get(i);
-                    indexofremove = i;
+                if(botoesjogadores.get(i).getText().isBlank() == false){
+                    if(botoesjogadores.get(j).getText().isBlank() == false){
+                        if (i != j){
+                            flagposi = true;
+                            if(pontos.get(i) > pontos.get(j)){
+                            contadorcl = contadorcl + 1;
+                            }
+                        }
+                    }
+                }
+            }
+            
+            if(flagposi == true){
+                if(pntcolocados[(contadorcolocado - 1) - contadorcl] == pontos.get(i)){
+                    while (flagmsmponto == false){
+                        msmponto = contadorcolocado - 1 - contadorcl;
+                        
+                    }
+                } else {
+                    colocados[(contadorcolocado - 1) - contadorcl] = botoesjogadores.get(i).getText();
+                    pntcolocados[(contadorcolocado - 1) - contadorcl] = pontos.get(i);
+                    flagposi = false;
+                    contadorcl = 0;
                 }
             }
         }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[0] || pontos.get(i) > pontos.get(j)){
-                    colocados[1] = botoesjogadores.get(i).getText();
-                    pntcolocados[1] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[1] || pontos.get(i) > pontos.get(j)){
-                    colocados[2] = botoesjogadores.get(i).getText();
-                    pntcolocados[2] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[2] || pontos.get(i) > pontos.get(j)){
-                    colocados[3] = botoesjogadores.get(i).getText();
-                    pntcolocados[3] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[3] || pontos.get(i) > pontos.get(j)){
-                    colocados[4] = botoesjogadores.get(i).getText();
-                    pntcolocados[4] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[4] || pontos.get(i) > pontos.get(j)){
-                    colocados[5] = botoesjogadores.get(i).getText();
-                    pntcolocados[5] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[5] || pontos.get(i) > pontos.get(j)){
-                    colocados[6] = botoesjogadores.get(i).getText();
-                    pntcolocados[6] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[6] || pontos.get(i) > pontos.get(j)){
-                    colocados[7] = botoesjogadores.get(i).getText();
-                    pntcolocados[7] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[7] || pontos.get(i) > pontos.get(j)){
-                    colocados[8] = botoesjogadores.get(i).getText();
-                    pntcolocados[8] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[8] || pontos.get(i) > pontos.get(j)){
-                    colocados[9] = botoesjogadores.get(i).getText();
-                    pntcolocados[9] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[9] || pontos.get(i) > pontos.get(j)){
-                    colocados[10] = botoesjogadores.get(i).getText();
-                    pntcolocados[10] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
-        
-        for(int i = 0; i < 11; i++){
-            for(int j = 0; j < 11; j++){
-                if(pontos.get(i) == pntcolocados[10] || pontos.get(i) > pontos.get(j)){
-                    colocados[11] = botoesjogadores.get(i).getText();
-                    pntcolocados[11] = pontos.get(i);
-                    indexofremove = i;
-                }
-            }
-        }
-        
-        pontos.remove(indexofremove);
-        botoesjogadores.remove(indexofremove);
-        indexofremove = 0;
     }
+    
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
