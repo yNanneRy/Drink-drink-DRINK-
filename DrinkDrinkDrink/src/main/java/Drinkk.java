@@ -79,9 +79,9 @@ public class Drinkk extends javax.swing.JFrame {
     // LinkedList do tipo INTEGER que manterá a pontuação de cada jogador.
     LinkedList<Integer> pontos = new LinkedList(); 
     
-    // LinkedList do tipo STRING que manterá os colocados do jogo
-    LinkedList<String> colocados = new LinkedList();
-    int contcolocado = 1;
+    String colocados[] = new String[12];
+    int pntcolocados[] = new int[12];
+    int indexofremove = 0;
     
     // Variável que manterá o que o jogador escolher.
     int vddoudsf;
@@ -1097,63 +1097,63 @@ public class Drinkk extends javax.swing.JFrame {
         primColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         primColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         primColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        primColocadoLABEL.setText("1º LUGAR:");
+        primColocadoLABEL.setText("1º LUGAR: ");
 
         segColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         segColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         segColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        segColocadoLABEL.setText("2º LUGAR:");
+        segColocadoLABEL.setText("2º LUGAR: ");
 
         terColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         terColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         terColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        terColocadoLABEL.setText("3º LUGAR:");
+        terColocadoLABEL.setText("3º LUGAR: ");
         terColocadoLABEL.setToolTipText("");
 
         quarColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         quarColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         quarColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        quarColocadoLABEL.setText("4º LUGAR:");
+        quarColocadoLABEL.setText("4º LUGAR: ");
 
         quinColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         quinColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         quinColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        quinColocadoLABEL.setText("5º LUGAR:");
+        quinColocadoLABEL.setText("5º LUGAR: ");
 
         sexColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         sexColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         sexColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        sexColocadoLABEL.setText("6º LUGAR:");
+        sexColocadoLABEL.setText("6º LUGAR: ");
 
         setColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         setColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         setColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        setColocadoLABEL.setText("7º LUGAR:");
+        setColocadoLABEL.setText("7º LUGAR: ");
 
         oitColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         oitColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         oitColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        oitColocadoLABEL.setText("8º LUGAR:");
+        oitColocadoLABEL.setText("8º LUGAR: ");
 
         nonColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         nonColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         nonColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        nonColocadoLABEL.setText("9º LUGAR:");
+        nonColocadoLABEL.setText("9º LUGAR: ");
 
         decColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         decColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         decColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        decColocadoLABEL.setText("10º LUGAR:");
+        decColocadoLABEL.setText("10º LUGAR: ");
 
         dec1ColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         dec1ColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         dec1ColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        dec1ColocadoLABEL.setText("11º LUGAR:");
+        dec1ColocadoLABEL.setText("11º LUGAR: ");
 
         dec2ColocadoLABEL.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
         dec2ColocadoLABEL.setForeground(new java.awt.Color(255, 255, 255));
         dec2ColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
-        dec2ColocadoLABEL.setText("12º LUGAR:");
+        dec2ColocadoLABEL.setText("12º LUGAR: ");
 
         javax.swing.GroupLayout ColocadosLayout = new javax.swing.GroupLayout(Colocados.getContentPane());
         Colocados.getContentPane().setLayout(ColocadosLayout);
@@ -2502,54 +2502,215 @@ public class Drinkk extends javax.swing.JFrame {
             
         // Jogadores aparecem.
         } else if(contjogofinalizado == 24){
-            dec2ColocadoLABEL.setText(dec2ColocadoLABEL.getText() + colocados.get(12)  + "* pontos)");
+            dec2ColocadoLABEL.setText(dec2ColocadoLABEL.getText() + "* pontos)");
         } else if(contjogofinalizado == 25){
-            dec1ColocadoLABEL.setText(dec1ColocadoLABEL.getText() + colocados.get(11) + "* pontos)");
+            dec1ColocadoLABEL.setText(dec1ColocadoLABEL.getText() + "* pontos)");
         } 
         else if(contjogofinalizado == 26){
-            decColocadoLABEL.setText(decColocadoLABEL.getText() + colocados.get(10) + "* pontos)");
+            decColocadoLABEL.setText(decColocadoLABEL.getText() + "* pontos)");
         } 
         else if(contjogofinalizado == 27){
-            nonColocadoLABEL.setText(nonColocadoLABEL.getText() + " [jogador] (* pontos)");
+            nonColocadoLABEL.setText(nonColocadoLABEL.getText() + "* pontos)");
         } 
         else if(contjogofinalizado == 28){
-            oitColocadoLABEL.setText(oitColocadoLABEL.getText() + " [jogador] (* pontos)");
+            oitColocadoLABEL.setText(oitColocadoLABEL.getText() + "* pontos)");
         } 
         else if(contjogofinalizado == 29){
-            setColocadoLABEL.setText(setColocadoLABEL.getText() + " [jogador] (* pontos)");
+            setColocadoLABEL.setText(setColocadoLABEL.getText() + "* pontos)");
         } 
         else if(contjogofinalizado == 30){
-            sexColocadoLABEL.setText(sexColocadoLABEL.getText() + " [jogador] (* pontos)");
+            sexColocadoLABEL.setText(sexColocadoLABEL.getText() + "* pontos)");
         } 
         else if(contjogofinalizado == 31){
-            quinColocadoLABEL.setText(quinColocadoLABEL.getText() + " [jogador] (* pontos)");
+            quinColocadoLABEL.setText(quinColocadoLABEL.getText() + "* pontos)");
         } 
         else if(contjogofinalizado == 32){
-            quarColocadoLABEL.setText(quarColocadoLABEL.getText() + " [jogador] (* pontos)");
+            quarColocadoLABEL.setText(quarColocadoLABEL.getText() + "* pontos)");
         } 
         else if(contjogofinalizado == 33){
-            terColocadoLABEL.setText(terColocadoLABEL.getText() + " [jogador] (* pontos)");
+            terColocadoLABEL.setText(terColocadoLABEL.getText() + "* pontos)");
         } 
         else if(contjogofinalizado == 34){
-            segColocadoLABEL.setText(segColocadoLABEL.getText() + " [jogador] (* pontos)");
-            primColocadoLABEL.setText(primColocadoLABEL.getText() + " [jogador] (* pontos)");
+            segColocadoLABEL.setText(segColocadoLABEL.getText() + "* pontos)");
+            primColocadoLABEL.setText(primColocadoLABEL.getText() + "* pontos)");
             try {
                 service.wait();
             } catch (InterruptedException ex) {
                 Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
             }
-        } 
+        
+        }
     }
     
     public void colocados(){
+            
         for(int i = 0; i < 12; i++){
             for(int j = 0; j < 12; j++){
-               if (pontos.get(i) < pontos.get(j)){
-                   contcolocado = contcolocado + 1;
-               }
+                if (pontos.get(i) > pontos.get(j)){
+                    colocados[0] = botoesjogadores.get(i).getText();
+                    pntcolocados[0] = pontos.get(i);
+                    indexofremove = i;
+                }
             }
-            colocados.set(contcolocado, jogadores.get(i));
         }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[0] || pontos.get(i) > pontos.get(j)){
+                    colocados[1] = botoesjogadores.get(i).getText();
+                    pntcolocados[1] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[1] || pontos.get(i) > pontos.get(j)){
+                    colocados[2] = botoesjogadores.get(i).getText();
+                    pntcolocados[2] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[2] || pontos.get(i) > pontos.get(j)){
+                    colocados[3] = botoesjogadores.get(i).getText();
+                    pntcolocados[3] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[3] || pontos.get(i) > pontos.get(j)){
+                    colocados[4] = botoesjogadores.get(i).getText();
+                    pntcolocados[4] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[4] || pontos.get(i) > pontos.get(j)){
+                    colocados[5] = botoesjogadores.get(i).getText();
+                    pntcolocados[5] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[5] || pontos.get(i) > pontos.get(j)){
+                    colocados[6] = botoesjogadores.get(i).getText();
+                    pntcolocados[6] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[6] || pontos.get(i) > pontos.get(j)){
+                    colocados[7] = botoesjogadores.get(i).getText();
+                    pntcolocados[7] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[7] || pontos.get(i) > pontos.get(j)){
+                    colocados[8] = botoesjogadores.get(i).getText();
+                    pntcolocados[8] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[8] || pontos.get(i) > pontos.get(j)){
+                    colocados[9] = botoesjogadores.get(i).getText();
+                    pntcolocados[9] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[9] || pontos.get(i) > pontos.get(j)){
+                    colocados[10] = botoesjogadores.get(i).getText();
+                    pntcolocados[10] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
+        
+        for(int i = 0; i < 11; i++){
+            for(int j = 0; j < 11; j++){
+                if(pontos.get(i) == pntcolocados[10] || pontos.get(i) > pontos.get(j)){
+                    colocados[11] = botoesjogadores.get(i).getText();
+                    pntcolocados[11] = pontos.get(i);
+                    indexofremove = i;
+                }
+            }
+        }
+        
+        pontos.remove(indexofremove);
+        botoesjogadores.remove(indexofremove);
+        indexofremove = 0;
     }
     
     public static void main(String args[]) {

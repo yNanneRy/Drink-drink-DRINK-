@@ -1161,7 +1161,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="1&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="1&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="segColocadoLABEL">
@@ -1173,7 +1173,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="2&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="2&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="terColocadoLABEL">
@@ -1185,7 +1185,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="3&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="3&#xba; LUGAR: "/>
             <Property name="toolTipText" type="java.lang.String" value=""/>
           </Properties>
         </Component>
@@ -1198,7 +1198,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="4&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="4&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="quinColocadoLABEL">
@@ -1210,7 +1210,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="5&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="5&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="sexColocadoLABEL">
@@ -1222,7 +1222,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="6&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="6&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="setColocadoLABEL">
@@ -1234,7 +1234,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="7&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="7&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="oitColocadoLABEL">
@@ -1246,7 +1246,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="8&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="8&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="nonColocadoLABEL">
@@ -1258,7 +1258,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="9&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="9&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="decColocadoLABEL">
@@ -1270,7 +1270,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="10&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="10&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="dec1ColocadoLABEL">
@@ -1282,7 +1282,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="11&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="11&#xba; LUGAR: "/>
           </Properties>
         </Component>
         <Component class="javax.swing.JLabel" name="dec2ColocadoLABEL">
@@ -1294,7 +1294,7 @@
               <Color blue="ff" green="ff" red="ff" type="rgb"/>
             </Property>
             <Property name="horizontalAlignment" type="int" value="0"/>
-            <Property name="text" type="java.lang.String" value="12&#xba; LUGAR:"/>
+            <Property name="text" type="java.lang.String" value="12&#xba; LUGAR: "/>
           </Properties>
         </Component>
       </SubComponents>
