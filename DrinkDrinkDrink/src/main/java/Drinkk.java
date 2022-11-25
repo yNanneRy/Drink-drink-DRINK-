@@ -80,8 +80,10 @@ public class Drinkk extends javax.swing.JFrame {
     LinkedList<Integer> pontos = new LinkedList(); 
     
     String colocados[];
-    int pntcolocados[];
+    Integer pntcolocados[];
     int contadorcolocado = 0;
+    int contadorcl = 0;
+    boolean flagposi = false;
     
     // Variável que manterá o que o jogador escolher.
     int vddoudsf;
@@ -324,6 +326,11 @@ public class Drinkk extends javax.swing.JFrame {
         pontos.add(pontjg10);
         pontos.add(pontjg11);
         pontos.add(pontjg12);
+        
+        for(int i = 0; i < 12; i++){
+            colocados[i] = null;
+            pntcolocados[i] = null;
+        }
     }
     @SuppressWarnings("unchecked")
     // <editor-fold defaultstate="collapsed" desc="Generated Code">//GEN-BEGIN:initComponents
@@ -2504,81 +2511,81 @@ public class Drinkk extends javax.swing.JFrame {
         // Jogadores aparecem.
         } else if(contjogofinalizado == 24){
             if(contadorcolocado >=  12){
-                dec2ColocadoLABEL.setText("12º LUGAR: " + colocados[11] + " (" + pntcolocados[11] + " pontos)");
+                dec2ColocadoLABEL.setText("12º LUGAR: " + colocados.get(11) + " (" + pntcolocados.get(11) + " pontos)");
             } else {    
                 dec2ColocadoLABEL.setText("12º LUGAR: Ninguém!");
             }   
         } else if(contjogofinalizado == 25){
             if(contadorcolocado >=  11){
-                dec1ColocadoLABEL.setText("11º LUGAR: " + colocados[10] + " (" + pntcolocados[10] + " pontos)");
+                dec1ColocadoLABEL.setText("11º LUGAR: " + colocados.get(10) + " (" + pntcolocados.get(10) + " pontos)");
             } else {    
                 dec1ColocadoLABEL.setText("11º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 26){
             if(contadorcolocado >=  10){
-                decColocadoLABEL.setText("10º LUGAR: " + colocados[9] + " (" + pntcolocados[9] + " pontos)");
+                decColocadoLABEL.setText("10º LUGAR: " + colocados.get(9) + " (" + pntcolocados.get(9) + " pontos)");
             } else {    
                 decColocadoLABEL.setText("10º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 27){
             if(contadorcolocado >=  9){
-                nonColocadoLABEL.setText("9º LUGAR: " + colocados[8] + " (" + pntcolocados[8] + " pontos)");
+                nonColocadoLABEL.setText("9º LUGAR: " + colocados.get(8) + " (" + pntcolocados.get(8) + " pontos)");
             } else {    
                 nonColocadoLABEL.setText("9º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 28){
             if(contadorcolocado >=  8){
-                oitColocadoLABEL.setText("8º LUGAR: " + colocados[7] + " (" + pntcolocados[7] + " pontos)");
+                oitColocadoLABEL.setText("8º LUGAR: " + colocados.get(7) + " (" + pntcolocados.get(7) + " pontos)");
             } else {    
                 oitColocadoLABEL.setText("8º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 29){
             if(contadorcolocado >=  7){
-                setColocadoLABEL.setText("7º LUGAR: " + colocados[6] + " (" + pntcolocados[6] + " pontos)");
+                setColocadoLABEL.setText("7º LUGAR: " + colocados.get(6) + " (" + pntcolocados.get(6) + " pontos)");
             } else {    
                 setColocadoLABEL.setText("7º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 30){
             if(contadorcolocado >=  6){
-                sexColocadoLABEL.setText("6º LUGAR: " + colocados[5] + " (" + pntcolocados[5] + " pontos)");
+                sexColocadoLABEL.setText("6º LUGAR: " + colocados.get(5) + " (" + pntcolocados.get(5) + " pontos)");
             } else {    
                 sexColocadoLABEL.setText("6º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 31){
             if(contadorcolocado >=  5){
-                quinColocadoLABEL.setText("5º LUGAR: " + colocados[4] + " (" + pntcolocados[4] + " pontos)");
+                quinColocadoLABEL.setText("5º LUGAR: " + colocados.get(4) + " (" + pntcolocados.get(4) + " pontos)");
             } else {    
                 quinColocadoLABEL.setText("5º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 32){
             if(contadorcolocado >=  4){
-                quarColocadoLABEL.setText("4º LUGAR: " + colocados[3] + " (" + pntcolocados[3] + " pontos)");
+                quarColocadoLABEL.setText("4º LUGAR: " + colocados.get(3) + " (" + pntcolocados.get(3) + " pontos)");
             } else {    
                 quarColocadoLABEL.setText("4º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 33){
             if(contadorcolocado >=  3){
-                terColocadoLABEL.setText("3º LUGAR: " + colocados[2] + " (" + pntcolocados[2] + " pontos)");
+                terColocadoLABEL.setText("3º LUGAR: " + colocados.get(2) + " (" + pntcolocados.get(2) + " pontos)");
             } else {    
                 terColocadoLABEL.setText("3º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 34){
             if(contadorcolocado >=  2){
-                segColocadoLABEL.setText("2º LUGAR: " + colocados[1] + " (" + pntcolocados[1] + " pontos)");
+                segColocadoLABEL.setText("2º LUGAR: " + colocados.get(1) + " (" + pntcolocados.get(1) + " pontos)");
             } else {    
                 segColocadoLABEL.setText("2º LUGAR: Ninguém!");
             }   
             if(contadorcolocado >=  1){
-                primColocadoLABEL.setText("1º LUGAR: " + colocados[0] + " (" + pntcolocados[0] + " pontos)");
+                primColocadoLABEL.setText("1º LUGAR: " + colocados.get(0) + " (" + pntcolocados.get(0) + " pontos)");
             } else {    
                 primColocadoLABEL.setText("1º LUGAR: Ninguém!");
             }   
@@ -2591,50 +2598,121 @@ public class Drinkk extends javax.swing.JFrame {
         }
     }
     
+    // Esse é o método chamado quando o jogo finaliza, é aqui que os colocados são
+    // alocados em seus devidos lugares, e isso será explicado a partir de agora.
     public void colocados(){
-       
-        int contadorcl = 0;
-        boolean flagposi = false;
-        int msmponto = 0;
-        boolean flagmsmponto = false;
         
+        // Primeiramente, precisamos saber o numero de jogadores no jogo para
+        // sabermos exatamente em que lugares poderão ficar.
         for(int i = 0; i < 12; i++){
+            
+            // A cada botão com nome encontrado, o contadorcolocado aumenta 1.
             if(botoesjogadores.get(i).getText().isBlank() == false){
+                
+                // O valor final de contadorcolocado é o número de jogadores presentes ao fim da partida
+                //, e (contadorcolocado - 1) é a ultima colocação. 
                 contadorcolocado = contadorcolocado + 1;
             }
         }
         
-        colocados = new String[contadorcolocado];
-        pntcolocados  = new int[contadorcolocado];
         
+        /*
+        // E então é iniciado outro laço de repetição, que servirá para acharmos nossos colocados.
         for(int i = 0; i < 12; i++){
-            for(int j = 0; j < 12; j++){
+            
+                // Percorrendo a nossa lista de botoesjogadores, encontraremos
+                // aqueles que não forem vazios.
                 if(botoesjogadores.get(i).getText().isBlank() == false){
-                    if(botoesjogadores.get(j).getText().isBlank() == false){
-                        if (i != j){
-                            flagposi = true;
-                            if(pontos.get(i) > pontos.get(j)){
-                            contadorcl = contadorcl + 1;
+                    
+                    // Com o botão achado, percorreremos a lista novamente para comparar
+                    // com os outros botões.
+                    for(int j = 0; j < 12; j++){
+                    
+                        // e então, quando acharmos os que não forem vazios, acharemos
+                        // outro botão que também não está vazio para efeito de comparação.
+                        if(botoesjogadores.get(j).getText().isBlank() == false){
+
+                            // Veremos se durante a percursão, o botão do índice i
+                            // não é o mesmo que o botão do índice j.
+                            if (i != j){
+
+                                // e após passar por todas as verificações, a variável de flag
+                                // é transformada em true pra sinalizar que achamos um lugar
+                                flagposi = true;
+
+                                // e então faremos uma soma no contadorcl pra dizer onde exatamente
+                                // esse jogador será alocado.
+                                if(pontos.get(i) > pontos.get(j)){
+                                contadorcl = contadorcl + 1;
+                                }
                             }
                         }
                     }
                 }
-            }
             
+            // O método que achei para alocar os jogadores em seu devido lugar não foi
+            // fácil de pensar. E assim como qualquer jogo, mais de um jogador pode ter a mesma
+            // pontuação. Para contornar isso, eu usei a seguinte lógica:
+            
+            // Primeiro, contamos quantos jogadores estavam ativos no jogo quando o jogo
+            // foi finalizado. Armazenamos essa contagem em uma variável, e essa variável
+            // será usada para ditar a última posição na nossa LinkedList. Ou seja, se estiverem
+            // 5 jogadores ativos no jogo, a última posição será a posição 5.
+            
+            // Segundamente, nós precisamos alocar os jogadores em seu devido lugar, certo? 
+            // Para isso, eu usei um outro contador. Para que esse contador conte, nós percorremos
+            // todos os nossos jogadores. Quando achamos um botão que tem um jogador em jogo, percorremos
+            // nossa lista novamente. Quando acharmos outro botão que tem um jogador em jogo, nós vemos se
+            // esse não é o mesmo que o primeiro botão achado. Se não for, acendemos uma bandeira
+            //, a flagposi que é o mesmo que "ACHEI UM COLOCADO!" para o sistema. E então, veremos
+            // se o primeiro jogador achado tem pontuação maior que o segundo jogador, e se sim,
+            // nosso contadorcl aumenta + 1. Continuando com o primeiro jogador achado, percorreremos
+            // a lista o numero de vezes necessario ate acharmos um outro jogador, e esses também serão
+            // verificados se o primeiro jogador tem pontuação maior. Quanto mais contadorcl aumentar
+            //, mais o jogador fica acima dos outros, não estou certo? É esse o objetivo de contadorcl:
+            // definir com exatidão a posição do jogador no jogo. Se contadorcolocado é 5, logo temos 5 jogadores
+            // em jogo e a última posição é 5. Se contadorcl chegar a 3, significa que nosso jogador está a 3
+            // posições acima dos demais, ou seja, 5 - 3 = 2ª posição.
+            
+            // É claro que temos os jogadores empatados, e para eles, o contador contadorcl sempre dará o mesmo valor.
+            // Mas para contornar isso, foi usada a seguinte lógica:
+            
+            // Se flagposi for true, ou seja, se ele achou um jogador na partida, ele...
             if(flagposi == true){
-                if(pntcolocados[(contadorcolocado - 1) - contadorcl] == pontos.get(i)){
-                    while (flagmsmponto == false){
-                        msmponto = contadorcolocado - 1 - contadorcl;
+                
+                // irá verificar se a posição desse jogador na LinkedList ja esta ocupada pela mesma pontuação que ele,
+                // ou seja, é um empate.
+                if(pntcolocados.get(contadorcolocado - contadorcl) != null){
+                    int p = 1;
+                    boolean flagmsmponto = false;
+                    
+                    // Se sim, o sistema entrará em um laço de repetição até que se encontre a próxima posição vazia do array
+                    while(flagmsmponto == false){
                         
+                        // se achar, o valor será alocado na LinkedList, bem como seu nome na LinkedList de colocados.
+                        if (pntcolocados.get(contadorcolocado - contadorcl - p) == null){
+                            colocados.add(contadorcolocado - contadorcl - p, botoesjogadores.get(i).getText());
+                            pntcolocados.add(contadorcolocado - contadorcl - p, pontos.get(i));
+                            flagmsmponto = true;
+                            flagposi = false;
+                            contadorcl = 0;
+                            
+                        // Se não achar, p aumenta mais um para chegar no próximo index na execução do laço de repetição.
+                        } else {
+                            p = p + 1;
+                        }
                     }
-                } else {
-                    colocados[(contadorcolocado - 1) - contadorcl] = botoesjogadores.get(i).getText();
-                    pntcolocados[(contadorcolocado - 1) - contadorcl] = pontos.get(i);
+                    
+                // Agora, se a posição for vaga na LinkedList
+                } else if (pntcolocados.get(contadorcolocado - contadorcl) == null){
+                    colocados.add(contadorcolocado - contadorcl, botoesjogadores.get(i).getText());
+                    pntcolocados.add(contadorcolocado  - contadorcl, pontos.get(i));
                     flagposi = false;
                     contadorcl = 0;
                 }
             }
         }
+        */
     }
     
     
