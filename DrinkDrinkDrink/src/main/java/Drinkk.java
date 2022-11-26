@@ -212,6 +212,7 @@ public class Drinkk extends javax.swing.JFrame {
         decColocadoLABEL.setVisible(false);
         dec1ColocadoLABEL.setVisible(false);
         dec2ColocadoLABEL.setVisible(false);
+        ENCERRARBT.setVisible(false);
         
         
         // JFRAMES que devem ser obrigatóriamente personalizados. Aqui eles podem
@@ -423,6 +424,7 @@ public class Drinkk extends javax.swing.JFrame {
         decColocadoLABEL = new javax.swing.JLabel();
         dec1ColocadoLABEL = new javax.swing.JLabel();
         dec2ColocadoLABEL = new javax.swing.JLabel();
+        ENCERRARBT = new javax.swing.JButton();
         JOGOFINALIZADO = new javax.swing.JFrame();
         jLabel4 = new javax.swing.JLabel();
         jLabel1 = new javax.swing.JLabel();
@@ -1184,6 +1186,16 @@ public class Drinkk extends javax.swing.JFrame {
         dec2ColocadoLABEL.setHorizontalAlignment(javax.swing.SwingConstants.CENTER);
         dec2ColocadoLABEL.setText("12º LUGAR: ");
 
+        ENCERRARBT.setBackground(new java.awt.Color(0, 0, 0));
+        ENCERRARBT.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        ENCERRARBT.setForeground(new java.awt.Color(255, 255, 255));
+        ENCERRARBT.setText("ENCERRAR");
+        ENCERRARBT.addActionListener(new java.awt.event.ActionListener() {
+            public void actionPerformed(java.awt.event.ActionEvent evt) {
+                ENCERRARBTActionPerformed(evt);
+            }
+        });
+
         javax.swing.GroupLayout ColocadosLayout = new javax.swing.GroupLayout(Colocados.getContentPane());
         Colocados.getContentPane().setLayout(ColocadosLayout);
         ColocadosLayout.setHorizontalGroup(
@@ -1202,6 +1214,10 @@ public class Drinkk extends javax.swing.JFrame {
             .addComponent(setColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(decColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
             .addComponent(dec2ColocadoLABEL, javax.swing.GroupLayout.DEFAULT_SIZE, javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+            .addGroup(javax.swing.GroupLayout.Alignment.TRAILING, ColocadosLayout.createSequentialGroup()
+                .addContainerGap(javax.swing.GroupLayout.DEFAULT_SIZE, Short.MAX_VALUE)
+                .addComponent(ENCERRARBT, javax.swing.GroupLayout.PREFERRED_SIZE, 138, javax.swing.GroupLayout.PREFERRED_SIZE)
+                .addGap(23, 23, 23))
         );
         ColocadosLayout.setVerticalGroup(
             ColocadosLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
@@ -1233,7 +1249,8 @@ public class Drinkk extends javax.swing.JFrame {
                 .addComponent(dec1ColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 53, javax.swing.GroupLayout.PREFERRED_SIZE)
                 .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addComponent(dec2ColocadoLABEL, javax.swing.GroupLayout.PREFERRED_SIZE, 57, javax.swing.GroupLayout.PREFERRED_SIZE)
-                .addContainerGap(29, Short.MAX_VALUE))
+                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
+                .addComponent(ENCERRARBT, javax.swing.GroupLayout.DEFAULT_SIZE, 46, Short.MAX_VALUE))
         );
 
         JOGOFINALIZADO.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
@@ -1779,49 +1796,72 @@ public class Drinkk extends javax.swing.JFrame {
                 public void run(){
                     jogofinalizado();
                 }
-            }, 1000, 500, TimeUnit.MILLISECONDS);
+            }, 1200, 500, TimeUnit.MILLISECONDS);
        
         // Efeito de diminuição de "JOGO FINALIZADO"
         service.scheduleAtFixedRate(new Runnable(){
             public void run(){
                 jogofinalizado();
             }
-        }, 3000, 500, TimeUnit.MILLISECONDS);
+        }, 8235, 190, TimeUnit.MILLISECONDS);
         
         // Primeira vez que "COLOCADOS" aparece
         service.scheduleAtFixedRate(new Runnable(){
             public void run(){
                 jogofinalizado();
             }
-        }, 6000, 500, TimeUnit.MILLISECONDS);
+        }, 9235, 500, TimeUnit.MILLISECONDS);
         
         // Efeito de diminuição de "COLOCADOS"
         service.scheduleAtFixedRate(new Runnable(){
             public void run(){
                 jogofinalizado();
             }
-        }, 7000, 500, TimeUnit.MILLISECONDS);
+        }, 15235, 475, TimeUnit.MILLISECONDS);
         
         // Efeito de aparecimento dos colocados
         service.scheduleAtFixedRate(new Runnable(){
             public void run(){
                 jogofinalizado();
             }
-        }, 8000, 300, TimeUnit.MILLISECONDS);
+        }, 16235, 155, TimeUnit.MILLISECONDS);
+        
         
         // Efeito de diminuição de "Preparados?"
         service.scheduleAtFixedRate(new Runnable(){
             public void run(){
                 jogofinalizado();
             }
-        }, 11000, 300, TimeUnit.MILLISECONDS);
+        }, 24237, 150, TimeUnit.MILLISECONDS);
+        
         
         // Efeito de aparecimento dos colocados
         service.scheduleAtFixedRate(new Runnable(){
             public void run(){
                 jogofinalizado();
             }
-        }, 14000, 300, TimeUnit.MILLISECONDS);
+        }, 26237, 1000, TimeUnit.MILLISECONDS);
+        
+        // Efeito de aparecimento dos colocados a partir do 7º colocado
+        service.scheduleAtFixedRate(new Runnable(){
+            public void run(){
+                jogofinalizado();
+            }
+        }, 31237, 500, TimeUnit.MILLISECONDS);
+        
+        // Efeito de aparecimento dos colocados a partir do 5º colocado
+        service.scheduleAtFixedRate(new Runnable(){
+            public void run(){
+                jogofinalizado();
+            }
+        }, 32189, 210, TimeUnit.MILLISECONDS);
+        
+        // Efeito de aparecimento de "ENCERRAR"
+        service.scheduleAtFixedRate(new Runnable(){
+            public void run(){
+                jogofinalizado();
+            }
+        }, 33250, 140, TimeUnit.MILLISECONDS);
     }//GEN-LAST:event_FinalizarJogoBTActionPerformed
 
     // Ação performada do botão "Adicionar" da segunda tela. Ela serve para adicionar
@@ -2283,6 +2323,10 @@ public class Drinkk extends javax.swing.JFrame {
         }
     }//GEN-LAST:event_Jg12ActionPerformed
 
+    private void ENCERRARBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_ENCERRARBTActionPerformed
+        // TODO add your handling code here:
+    }//GEN-LAST:event_ENCERRARBTActionPerformed
+
     public void paintComponentRed(JFrame g){
         if(color.equals(Color.black)){
             color = Color.red;
@@ -2533,55 +2577,65 @@ public class Drinkk extends javax.swing.JFrame {
         // Jogadores aparecem.
         } else if(contjogofinalizado == 24){
             if(contadorjogadores >=  12){
-                dec2ColocadoLABEL.setText("12º LUGAR: " + colocados.get(11) + " (" + pntcolocados.get(11) + " pontos)");
+                dec2ColocadoLABEL.setText("12º LUGAR: " + colocacao.get(11).getNome() + " (" + colocacao.get(11).getPontuacao() + " pontos)");
             } else {    
                 dec2ColocadoLABEL.setText("12º LUGAR: Ninguém!");
             }   
         } else if(contjogofinalizado == 25){
             if(contadorjogadores >=  11){
-                dec1ColocadoLABEL.setText("11º LUGAR: " + colocados.get(10) + " (" + pntcolocados.get(10) + " pontos)");
+                dec1ColocadoLABEL.setText("11º LUGAR: " + colocacao.get(10).getNome() + " (" + colocacao.get(10).getPontuacao() + " pontos)");
             } else {    
                 dec1ColocadoLABEL.setText("11º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 26){
             if(contadorjogadores >=  10){
-                decColocadoLABEL.setText("10º LUGAR: " + colocados.get(9) + " (" + pntcolocados.get(9) + " pontos)");
+                decColocadoLABEL.setText("10º LUGAR: " + colocacao.get(9).getNome() + " (" + colocacao.get(9).getPontuacao() + " pontos)");
             } else {    
                 decColocadoLABEL.setText("10º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 27){
             if(contadorjogadores >=  9){
-                nonColocadoLABEL.setText("9º LUGAR: " + colocados.get(8) + " (" + pntcolocados.get(8) + " pontos)");
+                nonColocadoLABEL.setText("9º LUGAR: " + colocacao.get(8).getNome() + " (" + colocacao.get(8).getPontuacao() + " pontos)");
             } else {    
                 nonColocadoLABEL.setText("9º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 28){
             if(contadorjogadores >=  8){
-                oitColocadoLABEL.setText("8º LUGAR: " + colocados.get(7) + " (" + pntcolocados.get(7) + " pontos)");
+                oitColocadoLABEL.setText("8º LUGAR: " + colocacao.get(7).getNome() + " (" + colocacao.get(7).getPontuacao() + " pontos)");
             } else {    
                 oitColocadoLABEL.setText("8º LUGAR: Ninguém!");
             }   
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } 
         else if(contjogofinalizado == 29){
             if(contadorjogadores >=  7){
-                setColocadoLABEL.setText("7º LUGAR: " + colocados.get(6) + " (" + pntcolocados.get(6) + " pontos)");
+                setColocadoLABEL.setText("7º LUGAR: " + colocacao.get(6).getNome() + " (" + colocacao.get(6).getPontuacao() + " pontos)");
             } else {    
                 setColocadoLABEL.setText("7º LUGAR: Ninguém!");
             }   
         } 
         else if(contjogofinalizado == 30){
             if(contadorjogadores >=  6){
-                sexColocadoLABEL.setText("6º LUGAR: " + colocados.get(5) + " (" + pntcolocados.get(5) + " pontos)");
+                sexColocadoLABEL.setText("6º LUGAR: " + colocacao.get(5).getNome() + " (" + colocacao.get(5).getPontuacao() + " pontos)");
             } else {    
                 sexColocadoLABEL.setText("6º LUGAR: Ninguém!");
-            }   
+            }
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
         } 
         else if(contjogofinalizado == 31){
             if(contadorjogadores >=  5){
-                quinColocadoLABEL.setText("5º LUGAR: " + colocados.get(4) + " (" + pntcolocados.get(4) + " pontos)");
+                quinColocadoLABEL.setText("5º LUGAR: " + colocacao.get(4).getNome() + " (" + colocacao.get(4).getPontuacao() + " pontos)");
             } else {    
                 quinColocadoLABEL.setText("5º LUGAR: Ninguém!");
             }   
@@ -2606,6 +2660,7 @@ public class Drinkk extends javax.swing.JFrame {
             } else {    
                 segColocadoLABEL.setText("2º LUGAR: Ninguém!");
             }   
+        } else if (contjogofinalizado == 35){
             if(contadorjogadores >=  1){
                 primColocadoLABEL.setText("1º LUGAR: " + colocacao.get(0).getNome() + " (" + colocacao.get(0).getPontuacao() + " pontos)");
             } else {    
@@ -2616,7 +2671,13 @@ public class Drinkk extends javax.swing.JFrame {
             } catch (InterruptedException ex) {
                 Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
             }
-        
+        } else if (contjogofinalizado == 36){
+            ENCERRARBT.setVisible(true);
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
         }
     }
     
@@ -3116,6 +3177,7 @@ public class Drinkk extends javax.swing.JFrame {
     private javax.swing.JButton Drink22;
     private javax.swing.JFrame Drink3;
     private javax.swing.JButton Drink33;
+    private javax.swing.JButton ENCERRARBT;
     private javax.swing.JLabel ErroTXT;
     private javax.swing.JLabel ErroTXT1;
     private javax.swing.JButton FinalizarJogoBT;
