@@ -227,6 +227,7 @@ public class Drinkk extends javax.swing.JFrame {
         Colocados.setExtendedState(MAXIMIZED_BOTH);
         JOGOFINALIZADO.setExtendedState(MAXIMIZED_BOTH);
         JOGOFINALIZADO.getContentPane().setBackground(Color.black);
+        this.getContentPane().setBackground(Color.black);
         BlackWindow.getContentPane().setBackground(Color.black);
         Colocados.getContentPane().setBackground(Color.black);
         
@@ -429,7 +430,6 @@ public class Drinkk extends javax.swing.JFrame {
         ENCERRARBT = new javax.swing.JButton();
         JOGOFINALIZADO = new javax.swing.JFrame();
         jLabel4 = new javax.swing.JLabel();
-        jFileChooser1 = new javax.swing.JFileChooser();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -1284,8 +1284,6 @@ public class Drinkk extends javax.swing.JFrame {
         setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
         setForeground(java.awt.Color.white);
         setLocation(new java.awt.Point(350, 200));
-        setMaximizedBounds(new java.awt.Rectangle(0, 0, 757, 331));
-        setMaximumSize(new java.awt.Dimension(757, 331));
         setMinimumSize(new java.awt.Dimension(757, 331));
         setName("FramePrincipal"); // NOI18N
         setResizable(false);
@@ -1320,6 +1318,7 @@ public class Drinkk extends javax.swing.JFrame {
         AjudaBT.setCursor(new java.awt.Cursor(java.awt.Cursor.HAND_CURSOR));
 
         NomeTXT.setFont(new java.awt.Font("Segoe UI", 0, 18)); // NOI18N
+        NomeTXT.setForeground(new java.awt.Color(255, 255, 255));
         NomeTXT.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         NomeTXT.setText("Digite o nome de cada jogador:");
 
@@ -1349,10 +1348,12 @@ public class Drinkk extends javax.swing.JFrame {
         ErroTXT.setText("Por favor, insira um nome!");
 
         JogadoresTXT.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        JogadoresTXT.setForeground(new java.awt.Color(255, 255, 255));
         JogadoresTXT.setText("Jogadores:");
 
         NomeJogadoresTXT.setBackground(new java.awt.Color(255, 255, 255));
         NomeJogadoresTXT.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        NomeJogadoresTXT.setForeground(new java.awt.Color(255, 255, 255));
         NomeJogadoresTXT.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         IniciarJogoBT.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
@@ -1365,6 +1366,7 @@ public class Drinkk extends javax.swing.JFrame {
         });
 
         NomeJogadoresTXT1.setFont(new java.awt.Font("Segoe UI", 2, 14)); // NOI18N
+        NomeJogadoresTXT1.setForeground(new java.awt.Color(255, 255, 255));
         NomeJogadoresTXT1.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
 
         javax.swing.GroupLayout layout = new javax.swing.GroupLayout(getContentPane());
@@ -3228,7 +3230,6 @@ public class Drinkk extends javax.swing.JFrame {
     private javax.swing.JLabel dec1ColocadoLABEL;
     private javax.swing.JLabel dec2ColocadoLABEL;
     private javax.swing.JLabel decColocadoLABEL;
-    private javax.swing.JFileChooser jFileChooser1;
     private javax.swing.JLabel jLabel1;
     private javax.swing.JLabel jLabel2;
     private javax.swing.JLabel jLabel3;
