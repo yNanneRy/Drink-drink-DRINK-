@@ -226,6 +226,7 @@ public class Drinkk extends javax.swing.JFrame {
         Segundo.getContentPane().setBackground(Color.black);
         Colocados.setExtendedState(MAXIMIZED_BOTH);
         JOGOFINALIZADO.setExtendedState(MAXIMIZED_BOTH);
+        Terceiro.getContentPane().setBackground(Color.black);
         JOGOFINALIZADO.getContentPane().setBackground(Color.black);
         this.getContentPane().setBackground(Color.black);
         BlackWindow.getContentPane().setBackground(Color.black);
@@ -879,7 +880,6 @@ public class Drinkk extends javax.swing.JFrame {
         Terceiro.setTitle("VERDADE OU DESAFIO?");
         Terceiro.setBounds(new java.awt.Rectangle(0, 0, 791, 370));
         Terceiro.setLocation(new java.awt.Point(370, 230));
-        Terceiro.setMaximizedBounds(new java.awt.Rectangle(0, 0, 791, 370));
         Terceiro.setMinimumSize(new java.awt.Dimension(791, 370));
         Terceiro.setName("Terceiro"); // NOI18N
         Terceiro.setResizable(false);
@@ -887,6 +887,7 @@ public class Drinkk extends javax.swing.JFrame {
 
         JogadorSorteado.setBackground(new java.awt.Color(255, 255, 255));
         JogadorSorteado.setFont(new java.awt.Font("Segoe UI", 1, 24)); // NOI18N
+        JogadorSorteado.setForeground(new java.awt.Color(255, 255, 255));
         JogadorSorteado.setText("Jogador 1 foi sorteado! Jogador 1, verdade ou desafio?");
 
         VerdadeBT.setBackground(new java.awt.Color(102, 204, 0));
@@ -920,18 +921,22 @@ public class Drinkk extends javax.swing.JFrame {
         });
 
         txtVddDsf.setFont(new java.awt.Font("Segoe UI", 2, 18)); // NOI18N
+        txtVddDsf.setForeground(new java.awt.Color(255, 255, 255));
         txtVddDsf.setHorizontalAlignment(javax.swing.SwingConstants.LEFT);
         txtVddDsf.setText("Teste");
-        txtVddDsf.setBorder(javax.swing.BorderFactory.createLineBorder(new java.awt.Color(0, 0, 0)));
+        txtVddDsf.setBorder(javax.swing.BorderFactory.createMatteBorder(1, 1, 1, 1, new java.awt.Color(255, 255, 255)));
         txtVddDsf.setCursor(new java.awt.Cursor(java.awt.Cursor.DEFAULT_CURSOR));
 
         pontovdd.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        pontovdd.setForeground(new java.awt.Color(51, 204, 0));
         pontovdd.setText("+1 Ponto");
 
         pontodsf.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        pontodsf.setForeground(new java.awt.Color(102, 204, 0));
         pontodsf.setText("+2 Pontos");
 
         pontobb.setFont(new java.awt.Font("Segoe UI", 3, 12)); // NOI18N
+        pontobb.setForeground(new java.awt.Color(255, 0, 0));
         pontobb.setText("-1 ponto");
 
         ConfirmaBT.setBackground(new java.awt.Color(102, 153, 255));
@@ -944,6 +949,7 @@ public class Drinkk extends javax.swing.JFrame {
         });
 
         OUtxt.setFont(new java.awt.Font("Segoe UI", 1, 18)); // NOI18N
+        OUtxt.setForeground(new java.awt.Color(255, 255, 255));
         OUtxt.setText("OU");
 
         javax.swing.GroupLayout TerceiroLayout = new javax.swing.GroupLayout(Terceiro.getContentPane());
