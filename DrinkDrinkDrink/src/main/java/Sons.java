@@ -65,7 +65,7 @@ public class Sons {
 
     public void efeitoSorteio1(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspenseprim.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -78,7 +78,7 @@ public class Sons {
     
     public void efeitoSorteio2(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspenseseg.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -91,7 +91,7 @@ public class Sons {
     
     public void efeitoSorteio3(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspenseterc.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -104,7 +104,7 @@ public class Sons {
     
     public void efeitoSorteio4(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspensequa.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -117,7 +117,7 @@ public class Sons {
     
     public void efeitoSorteio5(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspensequin.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -130,7 +130,7 @@ public class Sons {
     
     public void efeitoSorteio6(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspensesex.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -143,7 +143,7 @@ public class Sons {
     
     public void efeitoSorteio7(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspenseset.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -156,7 +156,7 @@ public class Sons {
     
     public void efeitoSorteio8(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspenseoit.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -169,7 +169,7 @@ public class Sons {
     
     public void efeitoSorteio9(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspensenon.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -182,7 +182,7 @@ public class Sons {
     
     public void efeitoSorteio10(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspensedec.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -195,7 +195,7 @@ public class Sons {
     
     public void efeitoSorteio11(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspensedec11.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
@@ -208,7 +208,7 @@ public class Sons {
     
     public void efeitoSorteio12(){
         String dir = System.getProperty("user.dir");
-        File lol = new File(dir + "/Sons/.wav");
+        File lol = new File(dir + "/Sons/efeitosuspensedec2.wav");
         try {
             efeitoSorteio = AudioSystem.getClip();
             efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));

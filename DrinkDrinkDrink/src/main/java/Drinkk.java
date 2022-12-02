@@ -1657,6 +1657,7 @@ public class Drinkk extends javax.swing.JFrame {
         
         // Logo após isso, a tela reseta e some.
         Terceiro.dispose();
+        BlackWindow1.setVisible(false);
         VerdadeBT.setEnabled(true);
         DesafioBT.setEnabled(true);
         BeberBT.setVisible(false);
@@ -1705,6 +1706,7 @@ public class Drinkk extends javax.swing.JFrame {
         
         // Após clicar e os pontos serem definidos, a tela resetará e sumirá.
         Terceiro.dispose();
+        BlackWindow1.setVisible(false);
         VerdadeBT.setEnabled(true);
         DesafioBT.setEnabled(true);
         BeberBT.setVisible(false);
@@ -3279,16 +3281,15 @@ public class Drinkk extends javax.swing.JFrame {
         if(contadorSusSor1 > 48) { 
             if (contadorSusSor == sorteio){  
                 try {
-                    TimeUnit.MILLISECONDS.sleep(700);
+                    TimeUnit.MILLISECONDS.sleep(525);
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
                 }
                 
                 // Feita toda a reprogamação da tela de sorteio
-                BlackWindow1.setVisible(false);
+                Terceiro.setVisible(true);
                 Segundo.setVisible(false);
                 botoesjogadores.get(sorteio - 1).setBackground(Color.white);
-                Terceiro.setVisible(true);
                 ArregouBT.setEnabled(true);
                 VoltarBT.setEnabled(true);
                 FinalizarJogoBT.setEnabled(true);
