@@ -1661,12 +1661,12 @@ public class Drinkk extends javax.swing.JFrame {
         VerdadeBT.setEnabled(true);
         DesafioBT.setEnabled(true);
         BeberBT.setVisible(false);
-        pontovdd.setForeground(Color.black);
-        pontodsf.setForeground(Color.black);
+        pontovdd.setForeground(Color.green);
+        pontodsf.setForeground(Color.green);
         pontobb.setVisible(false);
         txtVddDsf.setVisible(false);
         ConfirmaBT.setVisible(false);
-        OUtxt.setForeground(Color.black);
+        OUtxt.setForeground(Color.white);
         
         // Aqui está o trunfo do sistema. O sistema sorteará um número de 1 a 3,
         // e o usuário deverá beber o número de vezes em "shots" que o sistema sortear.
@@ -1710,12 +1710,12 @@ public class Drinkk extends javax.swing.JFrame {
         VerdadeBT.setEnabled(true);
         DesafioBT.setEnabled(true);
         BeberBT.setVisible(false);
-        pontovdd.setForeground(Color.black);
-        pontodsf.setForeground(Color.black);
+        pontovdd.setForeground(Color.green);
+        pontodsf.setForeground(Color.green);
         pontobb.setVisible(false);
         txtVddDsf.setVisible(false);
         ConfirmaBT.setVisible(false);
-        OUtxt.setForeground(Color.black);
+        OUtxt.setForeground(Color.white);
         
         // E então, a tela de sorteio aparecerá novamente.
         Segundo.setVisible(true);
