@@ -46,6 +46,8 @@ public class Drinkk extends javax.swing.JFrame {
     // Cada variável tem um propósito durante a execução do código, que será explicado.
     
     String[] args;
+    int contadorSusSor = 0;
+    int contadorSusSor1 = 0;
     
     // Variáveis para a alocação de colocados
     ArrayList<Colocados> colocacao = new ArrayList<>();
@@ -225,10 +227,12 @@ public class Drinkk extends javax.swing.JFrame {
         Drink3.setExtendedState(MAXIMIZED_BOTH);
         Segundo.getContentPane().setBackground(Color.black);
         Colocados.setExtendedState(MAXIMIZED_BOTH);
+        BlackWindow1.setExtendedState(MAXIMIZED_BOTH);
         JOGOFINALIZADO.setExtendedState(MAXIMIZED_BOTH);
         Terceiro.getContentPane().setBackground(Color.black);
         JOGOFINALIZADO.getContentPane().setBackground(Color.black);
         this.getContentPane().setBackground(Color.black);
+        BlackWindow1.getContentPane().setBackground(Color.black);
         BlackWindow.getContentPane().setBackground(Color.black);
         Colocados.getContentPane().setBackground(Color.black);
         
@@ -431,6 +435,7 @@ public class Drinkk extends javax.swing.JFrame {
         ENCERRARBT = new javax.swing.JButton();
         JOGOFINALIZADO = new javax.swing.JFrame();
         jLabel4 = new javax.swing.JLabel();
+        BlackWindow1 = new javax.swing.JFrame();
         jLabel1 = new javax.swing.JLabel();
         jLabel2 = new javax.swing.JLabel();
         jLabel3 = new javax.swing.JLabel();
@@ -447,6 +452,7 @@ public class Drinkk extends javax.swing.JFrame {
 
         Segundo.setDefaultCloseOperation(javax.swing.WindowConstants.DISPOSE_ON_CLOSE);
         Segundo.setTitle("SORTEIO DE JOGADORES\n");
+        Segundo.setAlwaysOnTop(true);
         Segundo.setBackground(new java.awt.Color(255, 255, 255));
         Segundo.setLocation(new java.awt.Point(315, 150));
         Segundo.setMinimumSize(new java.awt.Dimension(882, 575));
@@ -757,7 +763,6 @@ public class Drinkk extends javax.swing.JFrame {
                         .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                         .addComponent(ErroTXT1, javax.swing.GroupLayout.PREFERRED_SIZE, 148, javax.swing.GroupLayout.PREFERRED_SIZE)
                         .addGap(0, 109, Short.MAX_VALUE)))
-                .addPreferredGap(javax.swing.LayoutStyle.ComponentPlacement.RELATED)
                 .addGroup(SegundoLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
                     .addGroup(SegundoLayout.createSequentialGroup()
                         .addGap(11, 11, 11)
@@ -1281,6 +1286,20 @@ public class Drinkk extends javax.swing.JFrame {
         JOGOFINALIZADOLayout.setVerticalGroup(
             JOGOFINALIZADOLayout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
             .addComponent(jLabel4, javax.swing.GroupLayout.DEFAULT_SIZE, 300, Short.MAX_VALUE)
+        );
+
+        BlackWindow1.setUndecorated(true);
+        BlackWindow1.setResizable(false);
+
+        javax.swing.GroupLayout BlackWindow1Layout = new javax.swing.GroupLayout(BlackWindow1.getContentPane());
+        BlackWindow1.getContentPane().setLayout(BlackWindow1Layout);
+        BlackWindow1Layout.setHorizontalGroup(
+            BlackWindow1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 400, Short.MAX_VALUE)
+        );
+        BlackWindow1Layout.setVerticalGroup(
+            BlackWindow1Layout.createParallelGroup(javax.swing.GroupLayout.Alignment.LEADING)
+            .addGap(0, 300, Short.MAX_VALUE)
         );
 
         setDefaultCloseOperation(javax.swing.WindowConstants.EXIT_ON_CLOSE);
@@ -2016,15 +2035,12 @@ public class Drinkk extends javax.swing.JFrame {
     
     // Ação performada do botão "SORTEAR" da segunda tela.
     private void SortearBTActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_SortearBTActionPerformed
-        // Após acionar esse botão, a própria tela ficará inativa.
-        Segundo.setVisible(false);
-
-        // Então, o jogador será sorteado.
+        // O jogador é sorteado.
         do {
             sorteio = random.nextInt(12);
             for (int i = 0; i < 12; i++){
                 if (i == sorteio){
-                    if (jogadoresNaoAtivos.contains(botoesjogadores.get(i)) == false){
+                    if (jogadoresNaoAtivos.contains(botoesjogadores.get(i)) == false && i != 0){
                         sorteado = botoesjogadores.get(i);
                         flag = 1;
                     }
@@ -2034,9 +2050,46 @@ public class Drinkk extends javax.swing.JFrame {
 
         flag = 0;
 
+        // Os botões ficam inativos durante o sorteio e aparece  uma tela preta por trás
+        ArregouBT.setEnabled(false);
+        VoltarBT.setEnabled(false);
+        FinalizarJogoBT.setEnabled(false);
+        AdicionarJogadorBT.setEnabled(false);
+        SortearBT.setEnabled(false);
+        BlackWindow1.setVisible(true);
+        
+        // Iniciada o som de suspense do sorteio
+        sons.efeitoSorteio(sorteio);
+        
+        // É feito o suspense do sorteio
+        service.scheduleAtFixedRate(new Runnable(){
+                public void run(){
+                    suspenseSorteio();
+                }
+            }, 0, 50, TimeUnit.MILLISECONDS);
+        service.scheduleAtFixedRate(new Runnable(){
+                public void run(){
+                    suspenseSorteio();
+                }
+            }, 600, 75, TimeUnit.MILLISECONDS);
+        service.scheduleAtFixedRate(new Runnable(){
+                public void run(){
+                    suspenseSorteio();
+                }
+            }, 1500, 125, TimeUnit.MILLISECONDS);
+        service.scheduleAtFixedRate(new Runnable(){
+                public void run(){
+                    suspenseSorteio();
+                }
+            }, 3000, 200, TimeUnit.MILLISECONDS);
+        service.scheduleAtFixedRate(new Runnable(){
+                public void run(){
+                    suspenseSorteio();
+                }
+            }, 5400, 300, TimeUnit.MILLISECONDS);
+        
         // A terceira tela aparece dando a escolha ao jogador sorteado.
         JogadorSorteado.setText(sorteado.getText() + " foi sorteado(a)! " + sorteado.getText() + ", escolha: ");
-        Terceiro.setVisible(true);
     }//GEN-LAST:event_SortearBTActionPerformed
 
     private void Jg11ActionPerformed(java.awt.event.ActionEvent evt) {//GEN-FIRST:event_Jg11ActionPerformed
@@ -2454,7 +2507,7 @@ public class Drinkk extends javax.swing.JFrame {
     // Esse é o método chamado para quando o jogo for finalizado. Ele é uma animação.
     public void jogofinalizado(){
         
-        // Contador para controle da animeção.
+        // Contador para controle da animação.
         contjogofinalizado = contjogofinalizado + 1;
         
         // Primeira vez que aparece na tela "JOGO FINALIZADO".
@@ -3138,6 +3191,120 @@ public class Drinkk extends javax.swing.JFrame {
         }
     }
     
+    public void suspenseSorteio(){
+        
+        // Contador para o suspense do sorteio
+        contadorSusSor = contadorSusSor + 1;
+        contadorSusSor1 = contadorSusSor1 + 1;
+        
+        switch(contadorSusSor){
+            case 1:
+                botoesjogadores.get(0).setBackground(Color.red);
+                botoesjogadores.get(11).setBackground(Color.white);
+                break;
+            case 2:
+                botoesjogadores.get(1).setBackground(Color.red);
+                botoesjogadores.get(0).setBackground(Color.white);
+                break;
+            case 3:
+                botoesjogadores.get(2).setBackground(Color.red);
+                botoesjogadores.get(1).setBackground(Color.white);
+                break;
+            case 4:
+                botoesjogadores.get(3).setBackground(Color.red);
+                botoesjogadores.get(2).setBackground(Color.white);
+                break;
+            case 5:
+                botoesjogadores.get(4).setBackground(Color.red);
+                botoesjogadores.get(3).setBackground(Color.white);
+                break;
+            case 6:
+                botoesjogadores.get(5).setBackground(Color.red);
+                botoesjogadores.get(4).setBackground(Color.white);
+                break;
+            case 7:
+                botoesjogadores.get(6).setBackground(Color.red);
+                botoesjogadores.get(5).setBackground(Color.white);
+                break;
+            case 8:
+                botoesjogadores.get(7).setBackground(Color.red);
+                botoesjogadores.get(6).setBackground(Color.white);
+                break;
+            case 9:
+                botoesjogadores.get(8).setBackground(Color.red);
+                botoesjogadores.get(7).setBackground(Color.white);
+                break;
+            case 10:
+                botoesjogadores.get(9).setBackground(Color.red);
+                botoesjogadores.get(8).setBackground(Color.white);
+                break;
+            case 11:
+                botoesjogadores.get(10).setBackground(Color.red);
+                botoesjogadores.get(9).setBackground(Color.white);
+                break;
+            case 12:
+                botoesjogadores.get(11).setBackground(Color.red);
+                botoesjogadores.get(10).setBackground(Color.white);
+                contadorSusSor = 0;
+                break;
+        }
+        if(contadorSusSor1 == 12){
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if(contadorSusSor1 == 24){
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if(contadorSusSor1 == 36){
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if(contadorSusSor1 == 48){
+            try {
+                service.wait();
+            } catch (InterruptedException ex) {
+                Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+            }
+        }
+        if(contadorSusSor1 > 48) { 
+            if (contadorSusSor == sorteio){  
+                try {
+                    TimeUnit.MILLISECONDS.sleep(700);
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+                // Feita toda a reprogamação da tela de sorteio
+                BlackWindow1.setVisible(false);
+                Segundo.setVisible(false);
+                botoesjogadores.get(sorteio - 1).setBackground(Color.white);
+                Terceiro.setVisible(true);
+                ArregouBT.setEnabled(true);
+                VoltarBT.setEnabled(true);
+                FinalizarJogoBT.setEnabled(true);
+                AdicionarJogadorBT.setEnabled(true);
+                SortearBT.setEnabled(true);
+                contadorSusSor = 0;
+                contadorSusSor1 = 0;
+                try {
+                    service.wait();
+                } catch (InterruptedException ex) {
+                    Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
+                }
+                
+            }
+        }
+    }
     
     public static void main(String args[]) {
         /* Set the Nimbus look and feel */
@@ -3179,6 +3346,7 @@ public class Drinkk extends javax.swing.JFrame {
     private javax.swing.JButton ArregouBT;
     private javax.swing.JButton BeberBT;
     private javax.swing.JFrame BlackWindow;
+    private javax.swing.JFrame BlackWindow1;
     private javax.swing.JTextField CDNome;
     private javax.swing.JFrame Colocados;
     private javax.swing.JLabel ColocadosLABEL;

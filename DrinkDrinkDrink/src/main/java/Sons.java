@@ -7,7 +7,9 @@ public class Sons {
     Clip efeito3;
     Clip tema;
     Clip jogoFinalizado;
-
+    Clip efeitoSorteio;
+    Clip efeitoSuspense;
+    
     public void Efeito2() {
         String dir = System.getProperty("user.dir");
         File lol = new File(dir + "/Sons/Efeito2.wav");
@@ -38,9 +40,9 @@ public class Sons {
         String dir = System.getProperty("user.dir");
         File lol = new File(dir + "/Sons/EfeitoSuspense.wav");
         try {
-            efeito3 = AudioSystem.getClip();
-            efeito3.open(AudioSystem.getAudioInputStream(lol));
-            efeito3.start();
+            efeitoSuspense = AudioSystem.getClip();
+            efeitoSuspense.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSuspense.start();
         } catch (Exception e) {
             System.out.print(System.getProperty("user.dir"));
             e.printStackTrace();
@@ -61,6 +63,202 @@ public class Sons {
         }
     }
 
+    public void efeitoSorteio1(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio2(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio3(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio4(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio5(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio6(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio7(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio8(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio9(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio10(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio11(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio12(){
+        String dir = System.getProperty("user.dir");
+        File lol = new File(dir + "/Sons/.wav");
+        try {
+            efeitoSorteio = AudioSystem.getClip();
+            efeitoSorteio.open(AudioSystem.getAudioInputStream(lol));
+            efeitoSorteio.start();
+        } catch (Exception e) {
+            System.out.print(System.getProperty("user.dir"));
+            e.printStackTrace();
+        }
+    }
+    
+    public void efeitoSorteio(int sorteio){
+        switch(sorteio){
+            case 1:
+                efeitoSorteio1();
+                break;
+            case 2:
+                efeitoSorteio2();
+                break;
+            case 3:
+                efeitoSorteio3();
+                break;
+            case 4:
+                efeitoSorteio4();
+                break;
+            case 5:
+                efeitoSorteio5();
+                break;
+            case 6:
+                efeitoSorteio6();
+                break;
+            case 7:
+                efeitoSorteio7();
+                break;
+            case 8:
+                efeitoSorteio8();
+                break;
+            case 9:
+                efeitoSorteio9();
+                break;
+            case 10:
+                efeitoSorteio10();
+                break;
+            case 11:
+                efeitoSorteio11();
+                break;
+            case 12:
+                efeitoSorteio12();
+                break;
+        }
+    }
     public void pararEfeito2() {
         try {
             efeito2.stop();
