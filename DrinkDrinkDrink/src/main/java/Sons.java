@@ -221,40 +221,40 @@ public class Sons {
     
     public void efeitoSorteio(int sorteio){
         switch(sorteio){
-            case 1:
+            case 0:
                 efeitoSorteio1();
                 break;
-            case 2:
+            case 1:
                 efeitoSorteio2();
                 break;
-            case 3:
+            case 2:
                 efeitoSorteio3();
                 break;
-            case 4:
+            case 3:
                 efeitoSorteio4();
                 break;
-            case 5:
+            case 4:
                 efeitoSorteio5();
                 break;
-            case 6:
+            case 5:
                 efeitoSorteio6();
                 break;
-            case 7:
+            case 6:
                 efeitoSorteio7();
                 break;
-            case 8:
+            case 7:
                 efeitoSorteio8();
                 break;
-            case 9:
+            case 8:
                 efeitoSorteio9();
                 break;
-            case 10:
+            case 9:
                 efeitoSorteio10();
                 break;
-            case 11:
+            case 10:
                 efeitoSorteio11();
                 break;
-            case 12:
+            case 11:
                 efeitoSorteio12();
                 break;
         }

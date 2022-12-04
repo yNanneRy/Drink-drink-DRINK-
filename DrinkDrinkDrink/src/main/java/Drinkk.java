@@ -3279,7 +3279,7 @@ public class Drinkk extends javax.swing.JFrame {
             }
         }
         if(contadorSusSor1 > 48) { 
-            if (contadorSusSor == sorteio){  
+            if (contadorSusSor == sorteio + 1){  
                 try {
                     TimeUnit.MILLISECONDS.sleep(525);
                 } catch (InterruptedException ex) {
@@ -3289,7 +3289,7 @@ public class Drinkk extends javax.swing.JFrame {
                 // Feita toda a reprogamação da tela de sorteio
                 Terceiro.setVisible(true);
                 Segundo.setVisible(false);
-                botoesjogadores.get(sorteio - 1).setBackground(Color.white);
+                botoesjogadores.get(sorteio).setBackground(Color.white);
                 ArregouBT.setEnabled(true);
                 VoltarBT.setEnabled(true);
                 FinalizarJogoBT.setEnabled(true);
@@ -3301,8 +3301,7 @@ public class Drinkk extends javax.swing.JFrame {
                     service.wait();
                 } catch (InterruptedException ex) {
                     Logger.getLogger(Drinkk.class.getName()).log(Level.SEVERE, null, ex);
-                }
-                
+                }                
             }
         }
     }
