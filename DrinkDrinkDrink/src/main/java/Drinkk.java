@@ -314,7 +314,6 @@ public class Drinkk extends javax.swing.JFrame {
         desafios.add("Explique onde está o clítoris.");
         desafios.add("Simule o seu olhar mais sexy para alguém da roda.");
         desafios.add("Morder (de leve) o pescoço de alguém da roda.");
-        desafios.add("Pule na minha pica");
         
         // LinkedList que compreende TODOS os jogadores.
         botoesjogadores.add(Jg1);
