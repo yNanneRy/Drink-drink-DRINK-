@@ -13,7 +13,7 @@ public class Colocados implements Comparable<Colocados>{
     }
 
     public void setNome(String nome) {
-        this.nome = nome;
+        
     }
 
     public int getPontuacao() {
