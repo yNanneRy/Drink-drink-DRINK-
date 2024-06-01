@@ -12,4 +12,4 @@ Caso o jogador responder à verdade ou cumprir o desafio proposto, ele receberá
 Caso um jogador queira sair do jogo, o botão "ARREGOU" está disponível para remove-lo do jogo. O contrário também é fornecido - o botão "ADICIONAR" está disponível para adicionar alguém ao jogo.
 <h1>Conclusão</h1>
 Caso o jogo seja finalizado, uma animação será apresentada, mostrando um ranking dos melhores jogadores de acordo com as suas pontuações. Todo o sistema foi desenvolvido em JAVA, sendo usado JFrames, JButtons e JLabels para a construção da sua interface.
-NENHUM banco de dados foi utilizado, transformando o projeto em um portfólio para apresentar meu conhecimento em lógica de programação.
+NENHUM banco de dados foi utilizado, transformando o projeto em um portfólio para apresentar meu conhecimento em lógica de programação e minha criatividade.
